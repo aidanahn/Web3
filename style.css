@@ -19,7 +19,7 @@ body {
 
 .root-container {
     animation-name: showContainer;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     display: flex;
     flex-direction: column;
 }
@@ -50,15 +50,17 @@ body {
     opacity: 0;
 
     animation-name: showText;
-    animation-duration: 3s;
-    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-delay: 1.25s;
     animation-fill-mode: forwards;
 }
 @keyframes showText {
     0% {
         opacity: 0;
+        transform: translateY(20px);
     }
     100% {
-        opacity: 1
+        opacity: 1;
+        transform: translateY(0);
     }
 }
