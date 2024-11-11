@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.root-container {
+    animation-name: showContainer;
+    animation-duration: 2.5s;
+    display: flex;
+    flex-direction: column;
+}
+@keyframes showContainer {
+    0% {
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.quote-text {
+    color: #fff;
+    font-size: 28px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+}
+
+.author-text {
+    color: #898989;
+    margin-left: auto;
+    margin-top: 15px;
+    font-family: 'DM Sans';
+    font-size: 16px;
+    opacity: 0;
+
+    animation-name: showText;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes showText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1
+    }
+}
